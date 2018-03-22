@@ -1,0 +1,12 @@
+$(document).ready(function(){
+	$(".menu_expand").hover(function(){
+		$(".mobile_menu").slideToggle();
+	});
+	$("#blog_form").hide();
+	$("#expand_form").click(function(){
+		$("#blog_form").slideToggle();
+		$("#expand_form").css("transition","0.5s");
+		$("#expand_form").css("background-color","rgb(70,80,150)");
+		$("#expand_form").css("color","white");
+	});
+});

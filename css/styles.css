@@ -1,0 +1,282 @@
+body{
+	font-family: "Josefin Sans";
+	margin: 0px;
+	font-size: 20px;
+	background-color: rgb(200,240,250);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23babab6' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+h1{
+	font-family: "Josefin Slab";
+	font-weight: 100;
+	display: inline;
+	text-align: center;
+}
+
+#mobile_menu{
+	display:none;
+}
+@-ms-viewport{
+	width: device-width;
+}
+.bolder{
+	display: inline;
+	font-weight: bold;
+}
+.head{
+	background-color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mobile_head{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.main_nav div{
+	display: inline;
+}
+.col-md{
+	text-align: center;
+}
+.main_nav a{
+	text-decoration: none;
+	color: gray;
+	padding: 5px 10px;
+	transition: 0.5s;
+}
+.main_nav a:hover{
+	color: black;
+	border-bottom: 1px solid black;
+}
+#coverphoto{
+	background-color: black;
+	max-height: 100vh;
+	max-width: 100vw;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#coverphoto img{
+	height: auto;
+	width: 100vw;
+	
+}
+#marsha_photo,#about_me{
+	margin: 40px;
+	padding: 10px;
+}
+#marsha_photo img{
+	max-width: 100%;
+	max-height: 700px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#about_me{
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.currentPage{
+	color: black;
+	border-bottom: 1px solid black;
+}
+.active{
+	border: 1px solid black;
+}
+#login{
+	float: bottom;
+	float: right;
+	font-size: 80%;
+}
+.content{
+	min-height: calc(100vh - 100px);
+}
+#login a{
+	color: gray
+}
+@media only screen and (max-width: 600px){
+	body{
+		transition: 1s;
+	}
+	#desktop_menu{
+		display: none;
+	}
+	#mobile_menu{
+		display: block;
+		padding: none;
+		transition: 0.5s;
+	}
+	.main_nav div{
+		display: none;
+		transition: 0.5s;
+	}
+	#mobile_menu:hover .main_nav div{
+		display: block;
+		transition: 0.5s;
+	}
+}
+#comment_form{
+	margin: 30px;
+}
+#artwork_main{
+	text-align: center;
+	margin-top: 20px;
+}
+.thumbnail {
+	background-color: black;
+	display: inline-block;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	margin: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.thumbnail img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100%;
+	width: auto;
+	-webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.overlay{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: black;
+}
+.thumbnail:hover .overlay {
+	opacity: .75;
+}
+.overlay_text{
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+.blogpost{
+	background-color: white;
+	margin: 20px auto;
+	max-width: 700px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.blogpost a{
+	color: black;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+.preview:hover{
+	background-color: rgb(220,220,220);
+}
+.blogpost_preview_title{
+	font-size: 140%;
+	background-color: rgb(70,80,150);
+	padding: 10px;
+	color: white;
+}
+.blogpost div{
+	padding: 10px;
+}
+.blogpost span{
+	font-size: 80%;
+	color: gray;
+	padding: 0px 10px;
+}
+#signup_form,#login_form,#add_blogpost_form,#update_blogpost_form,#delete_blogpost_form,.comment,.add_comment_form,.img_desc,.form{
+	max-width: 700px;
+	text-align: center;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input,textarea{
+	width: 100%;
+	padding: 5px;
+	border: none;
+	outline: none;
+	font-family: "Josefin Sans";
+}
+input[type = submit]{
+	background-color:white;
+}
+input:hover,textarea:hover{
+	background-color: rgb(240,240,240);
+}
+input:focus,textarea:focus{
+	background-color: rgb(240,240,240);
+}
+input[type = submit]:hover{
+	cursor:pointer;	
+}
+#expand_form{
+	padding: 10px;
+}
+#expand_form:hover{
+	background-color: rgb(240,240,240);
+	cursor: pointer;
+}
+.comment{
+	text-align: left;
+	padding: 10px;
+}
+.comment span{
+	font-size: 70%;
+	color: gray;
+}
+.image_focus{
+	width: 100%;
+	text-align: center;
+}
+.image_focus img{
+	width:100%;
+	max-width: 700px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#update_email_form input[type = checkbox]{
+	width: 20px;
+	height: 20px;
+}
+#welcome{
+	text-align: center;
+	font-size: 130%;
+	background-color: rgba(255,255,255,0.6);
+	padding:50px;
+	position: fixed;
+	left:0px;
+	right: 0px;
+	bottom: 15%;
+	z-index: 1;
+}
+.calendar{
+	width: 100%;
+	height: 600px;
+	padding: 10px;
+	border: none;
+}
+.signup{
+	background-color: white;
+	margin: 20px auto;
+	max-width: 1000px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signup div{
+	
+}
+.signup p{
+	text-align: center;
+}
+.img_desc{
+	padding: 10px;
+}
